@@ -7,10 +7,10 @@
 
     <!-- Win7 Superbar height at 96 DPI -->
 
-    <!-- ===== Windhawk Win7 overflow resources: PNG dalla cartella Resources =====
-         Le tre immagini del chevron (freccia 9x7 + glass tiles 21x20) sono file
-         nella cartella ../Resources accanto a Themes (stesso meccanismo delle
-         icone Start dei temi RetroBar di serie). -->
+    <!-- ===== Windhawk Win7 overflow resources: PNGs from the Resources folder =====
+         The three chevron images (9x7 arrow + 21x20 glass tiles) are files
+         in the ../Resources folder next to Themes (same mechanism as the
+         stock RetroBar theme Start icons). -->
     <BitmapImage x:Key="OverflowArrowImage"
                  UriSource="../Resources/Win7_Overflow_Arrow.png" />
     <BitmapImage x:Key="OverflowTileHoverImage"
@@ -18,7 +18,7 @@
     <BitmapImage x:Key="OverflowTilePressedImage"
                  UriSource="../Resources/Win7_Overflow_TilePressed.png" />
 
-    <!-- TASKBAR BACKGROUND PNG - texture oltre alla trasparenza -->
+    <!-- TASKBAR BACKGROUND PNG - texture on top of transparency -->
     <BitmapImage x:Key="TaskbarBackgroundImage"
                  UriSource="../Resources/taskbarBackground.png" />
     <ImageBrush x:Key="TaskbarTextureBrush"
@@ -59,8 +59,8 @@
 
 
 
-    <!-- ===== WIN7 THEME RESOURCES DA https://github.com/ramensoftware/windows-11-taskbar-styling-guide/tree/main/Themes/Windows7/ThemeResources =====
-         Implementate tutte le risorse, escluse quelle già presenti (non modificate) -->
+    <!-- ===== WIN7 THEME RESOURCES FROM https://github.com/ramensoftware/windows-11-taskbar-styling-guide/tree/main/Themes/Windows7/ThemeResources =====
+         All resources implemented, excluding those already present (unmodified) -->
     <BitmapImage x:Key="Win7_ActiveNormalImage" UriSource="../Resources/Win7/ActiveNormal.png" />
     <BitmapImage x:Key="Win7_InactiveNormalImage" UriSource="../Resources/Win7/InactiveNormal.png" />
     <BitmapImage x:Key="Win7_InactivePointerOverImage" UriSource="../Resources/Win7/InactivePointerOver.png" />
@@ -110,9 +110,9 @@
     <ImageBrush x:Key="Win7_AeroPeekBlueBrush" ImageSource="{StaticResource Win7_AeroPeekBlueImage}" Stretch="Fill" Opacity="0.9" />
 
 
-    <!-- Win7 TRAY/OROLOGIO hover VERI (PNG della skin Windhawk Win7 in
-         ../Resources): NON rettangoli — solo i due "baffi" verticali di
-         luce ai lati | icona | con bagliore in basso. Riposo: INVISIBILE. -->
+    <!-- Win7 TRAY/CLOCK real hover (PNG from the Windhawk Win7 skin in
+         ../Resources): NOT rectangles — just the two vertical "whiskers" of
+         light on the sides | icon | with a glow at the bottom. Rest: INVISIBLE. -->
     <BitmapImage x:Key="TrayTileHoverImage"
                  UriSource="../Resources/Win7_Tray_TileHover.png" />
     <BitmapImage x:Key="TrayTilePressedImage"
@@ -137,11 +137,11 @@
     <FontWeight x:Key="SetTimeMenuItemWeight">Normal</FontWeight>
     <!-- Windows 7 Aero glass: black glass tint with the subtle top reflection
          band, over DWM blur (AllowBlurBehind) or straight transparency. -->
-    <!-- OpenGlass-style: tint piu' leggera, piu' desktop in trasparenza -->
-    <!-- TRASPARENZA MOLTO MORBIDA: desktop quasi netto -->
-        <!-- TRASPARENZA ULTRA ACCENTUATA - QUASI VEDI DESKTOP COME FOTO WIN7
-         Foto Win7: vetro Aero con blur, wallpaper blu si intravede
-         In RetroBar: gradient bianchissimo 3-8% + texture 3% -->
+    <!-- OpenGlass-style: lighter tint, more desktop showing through transparency -->
+    <!-- VERY SOFT TRANSPARENCY: desktop almost clean -->
+        <!-- ULTRA-ACCENTUATED TRANSPARENCY - ALMOST SEE THE DESKTOP LIKE THE WIN7 PHOTO
+         Win7 photo: Aero glass with blur, blue wallpaper peeking through
+         In RetroBar: very-white 3-8% gradient + 3% texture -->
     <LinearGradientBrush x:Key="TaskbarBackground"
                          MappingMode="Absolute"
                          StartPoint="0,0"
@@ -239,7 +239,7 @@
                       Offset="0.5" />
     </LinearGradientBrush>
 
-    <!-- ===== SUPERBAR PINNED LOGIC: icone pinnate trasparenti a riposo ===== -->
+    <!-- ===== SUPERBAR PINNED LOGIC: pinned icons transparent at rest ===== -->
     <SolidColorBrush x:Key="TaskButtonOuterBorderPinned" Color="Transparent" />
     <SolidColorBrush x:Key="TaskButtonInnerBorderPinned" Color="Transparent" />
     <SolidColorBrush x:Key="TaskButtonInnerTopRightBorderPinned" Color="Transparent" />
@@ -648,14 +648,14 @@
                 Value="{DynamicResource TaskbarWindowBackground}" />
     </Style>
 
-    <!-- ===== TASKBAR CON TEXTURE PNG + TRASPARENZA (OpenGlass) ===== -->
+    <!-- ===== TASKBAR WITH PNG TEXTURE + TRANSPARENCY (OpenGlass) ===== -->
     <Style TargetType="ContentControl"
            x:Key="Taskbar"
            BasedOn="{StaticResource Taskbar}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ContentControl">
-                    <!-- TEXTURE WIN7TASKBAR.PNG 600x40 PER TASKBAR GENERALE + TRASPARENZA ULTRA -->
+                    <!-- WIN7TASKBAR.PNG 600x40 TEXTURE FOR THE GENERAL TASKBAR + ULTRA TRANSPARENCY -->
                     <Border BorderThickness="0"
                             BorderBrush="Transparent"
                             x:Name="TaskbarTopBorder">
@@ -670,10 +670,10 @@
                                         Background="Transparent"
                                         x:Name="TaskbarBottomInnerBorder">
                                     <Grid>
-                                        <!-- Layer 1: nuova texture win7taskbar.png 600x40 con riflessi diagonali -->
+                                        <!-- Layer 1: new win7taskbar.png 600x40 texture with diagonal reflections -->
                                         <Border x:Name="TaskbarTextureLayer"
                                                 Background="{DynamicResource Win7_TaskbarTextureBrush}" />
-                                        <!-- Layer 2: gradient ultra trasparente per far vedere desktop -->
+                                        <!-- Layer 2: ultra-transparent gradient to let the desktop show through -->
                                         <Border x:Name="TaskbarGradientLayer"
                                                 Background="{DynamicResource TaskbarBackground}"
                                                 Opacity="0.35" />
@@ -731,9 +731,9 @@
                     <Border BorderThickness="0"
                             Padding="8,0,0,0"
                             Name="TrayBorder">
-                        <!-- margine destro 0: il gap dopo l'ultima icona tray
-                             (verso l'orologio) e' solo il margine 9 dell'icona,
-                             come nella foto Win7 (~6-9px a 100%) -->
+                        <!-- right margin 0: the gap after the last tray icon
+                             (toward the clock) is just the icon's own 9px margin,
+                             as in the Win7 photo (~6-9px at 100%) -->
                         <ContentPresenter Margin="0,0,0,0"
                                           Name="Content" />
                     </Border>
@@ -768,7 +768,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <!-- INATTIVO APERTO: bordo largo (2px) come foto Win7 ideale -->
+                    <!-- INACTIVE OPEN: wide border (2px) as in the reference Win7 photo -->
                     <Border Background="Transparent"
                             Padding="0"
                             Name="ButtonBorder">
@@ -806,7 +806,7 @@
                                         Value="1,0,1,2" />
                             </DataTrigger.Setters>
                         </DataTrigger>
-                        <!-- HOVER INATTIVO: bordo allargato 7% (3px->3px ma più largo visivo) -->
+                        <!-- INACTIVE HOVER: border widened 7% (3px->3px but visually wider) -->
                         <Trigger Property="IsMouseOver"
                                  Value="True">
                             <Setter TargetName="ButtonOuterBorder"
@@ -869,7 +869,7 @@
         </Setter>
     </Style>
 
-    <!-- ACTIVE: bordo più alto (esteso fino al bordo taskbar, non corto) -->
+    <!-- ACTIVE: taller border (extends to the taskbar edge, not short) -->
     <Style TargetType="Button"
            x:Key="TaskButtonActive"
            BasedOn="{StaticResource TaskButton}">
@@ -1299,13 +1299,29 @@
                                     Property="Opacity"
                                     Value="1" />
                         </Trigger>
-                        <!-- START MENU APERTO: orb rimane su stato pressed fino a chiusura, senza toccare transizioni hover -->
+                        <!-- START MENU OPEN: the orb stays in the pressed state until closed.
+                             The hover animation (FillBehavior=HoldEnd) is an "animated" value
+                             driven by a Clock: it can remain active/held and, over time
+                             (after a few seconds, layout changes, other triggers), its
+                             Clock can be invalidated or reset, making the normal state
+                             "reappear" even while IsChecked is still true. So instead of
+                             using another animation here (same problem, just deferred), we
+                             first explicitly stop the hover storyboard with StopStoryboard,
+                             then apply static Setters, which stay reliably valid for the
+                             whole duration of the trigger, with no expiry. -->
                         <Trigger Property="IsChecked"
                                  Value="True">
+                            <Trigger.EnterActions>
+                                <StopStoryboard BeginStoryboardName="OrbHoverIn" />
+                                <StopStoryboard BeginStoryboardName="OrbHoverOut" />
+                            </Trigger.EnterActions>
                             <Setter TargetName="OrbPressed"
                                     Property="Opacity"
                                     Value="1" />
                             <Setter TargetName="OrbNormal"
+                                    Property="Opacity"
+                                    Value="0" />
+                            <Setter TargetName="OrbHover"
                                     Property="Opacity"
                                     Value="0" />
                         </Trigger>
@@ -1472,8 +1488,8 @@
         <Grid HorizontalAlignment="Center"
               MinWidth="68"
               SnapsToDevicePixels="True">
-            <!-- hover vera Win7 dell'orologio (PNG 55x29): baffi laterali,
-                 invisibile a riposo -->
+            <!-- real Win7 clock hover (55x29 PNG): side whiskers,
+                 invisible at rest -->
             <Image x:Name="ClockHoverImg"
                    Width="72"
                    Height="30"
@@ -1499,8 +1515,8 @@
         </StackPanel>
         </Grid>
         <ControlTemplate.Triggers>
-            <!-- hover dell'orologio: le STESSe due barre verticali delle icone
-                 tray (batteria/rete/connessione), con lo stesso fade -->
+            <!-- clock hover: the SAME two vertical bars used by the tray
+                 icons (battery/network/connection), with the same fade -->
             <Trigger Property="IsMouseOver"
                      Value="True">
                 <Trigger.EnterActions>
@@ -1551,11 +1567,11 @@
     <Style TargetType="Image"
            x:Key="NotifyIcon"
            BasedOn="{StaticResource NotifyIcon}">
-        <!-- tray Win7 dalla foto: passo ~24px a 100% allargato del 5%
-             (margine destro 9). Il PNG hover non partecipa al layout
-             (Canvas a larghezza 0), quindi l'item resta largo quanto la
-             sola icona 16px. I margini verticali 4/1 tengono l'icona
-             nella stessa posizione verticale della versione approvata. -->
+        <!-- Win7 tray from the photo: ~24px pitch at 100%, widened by 5%
+             (right margin 9). The hover PNG doesn't take part in layout
+             (zero-width Canvas), so the item stays as wide as the plain
+             16px icon alone. The 4/1 vertical margins keep the icon in
+             the same vertical position as the approved version. -->
         <Setter Property="Margin"
                 Value="0,4,9,1" />
         <Style.Triggers>
@@ -1569,23 +1585,23 @@
         </Style.Triggers>
     </Style>
 
-    <!-- Win7-style tray hover chrome: hover = PNG autentico Win7, due baffi
-         laterali | icona |; a riposo le icone restano del tutto normali.
-         Il controllo NotifyIcon e' ri-templategiato senza toccare il
-         contenuto (l'icona resta l'Image plain dell'app). -->
+    <!-- Win7-style tray hover chrome: hover = authentic Win7 PNG, two side
+         whiskers | icon |; at rest the icons remain completely normal.
+         The NotifyIcon control is re-templated without touching the
+         content (the icon stays the app's plain Image). -->
     <Style TargetType="{x:Type controls:NotifyIcon}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:NotifyIcon}">
                     <Grid SnapsToDevicePixels="True">
-                        <!-- hover vera Win7: i "baffi" | | laterali dal PNG,
-                             alti quanto la barra (40px) e centrati
-                             GEOMETRICAMENTE sul centro di ogni icona: il
-                             Canvas 0x0 e' centrato sull'icona e il PNG e'
-                             centrato sul Canvas (Canvas.Top = -altezza/2),
-                             senza numeri magici di posizionamento. Il Canvas
-                             NON partecipa al layout: l'item resta largo 16px
-                             (passo stretto) e l'icona nella sua posizione. -->
+                        <!-- real Win7 hover: the | | side "whiskers" from the PNG,
+                             as tall as the bar (40px) and GEOMETRICALLY centered
+                             on each icon's center: the 0x0 Canvas is centered
+                             on the icon and the PNG is centered on the Canvas
+                             (Canvas.Top = -height/2), with no magic positioning
+                             numbers. The Canvas does NOT take part in layout:
+                             the item stays 16px wide (tight pitch) and the icon
+                             stays in its own position. -->
                         <Canvas x:Name="HoverCanvas"
                                 Width="0"
                                 Height="0"
@@ -1602,15 +1618,16 @@
                                    Source="{DynamicResource TrayTileHoverImage}"
                                    Opacity="0" />
                         </Canvas>
-                        <!-- template pulito come il riferimento: la spaziatura
-                             arriva dagli stili NotifyIcon/Tray (margine
-                             destro per icona + padding gruppo) -->
+                        <!-- template kept clean as in the reference: spacing
+                             comes from the NotifyIcon/Tray styles (right
+                             margin per icon + group padding) -->
                         <ContentPresenter x:Name="Content" />
-                        <!-- SPOSTAMENTO REALE tray<->overflow in puro XAML:
-                             piccolo overlay pin, appare all'hover dell'icona.
-                             Il check scrive NotifyIcon.IsPinned (API pubblica
-                             gia' esistente di ManagedShell) -> Pin()/Unpin()
-                             ufficiali -> l'icona cambia zona immediatamente. -->
+                        <!-- REAL tray<->overflow movement in pure XAML:
+                             a small pin overlay appears on icon hover.
+                             The checkbox writes NotifyIcon.IsPinned (an
+                             already-existing public ManagedShell API) ->
+                             calls the official Pin()/Unpin() -> the icon
+                             moves to the other zone immediately. -->
                         <ToggleButton x:Name="PinToggle"
                                       Width="9"
                                       Height="9"
@@ -1702,12 +1719,12 @@
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
-                        <!-- verticale: hover corto (27px) centrato sull'icona;
-                             con Canvas.Top fisso a -20 il riquadro 27px va
-                             ricentrato spostando il Canvas di +6.5 (margine
-                             13/2). Solo proprieta' normali nei Setter: il
-                             loader XAML di RetroBar rifiuta le attached
-                             property nei Setter. -->
+                        <!-- vertical: short hover (27px) centered on the icon;
+                             with Canvas.Top fixed at -20 the 27px box needs
+                             re-centering by shifting the Canvas by +6.5 (13/2
+                             margin). Only plain properties in the Setters: the
+                             RetroBar XAML loader rejects attached properties
+                             in Setters. -->
                         <DataTrigger Binding="{Binding Path=Orientation, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
                                      Value="Vertical">
                             <Setter TargetName="HoverCanvas"
@@ -1770,8 +1787,8 @@
                                         BorderThickness="1"
                                         CornerRadius="2">
                                     <Border.Resources>
-                                        <!-- Popup icons: selezione azzurra Win7 (come il
-                                             vero pannello overflow di Windows 7) -->
+                                        <!-- Popup icons: Win7 blue selection (like the
+                                             real Windows 7 overflow panel) -->
                                         <Style x:Key="PopupNotifyIcon"
                                                TargetType="{x:Type controls:NotifyIcon}">
                                             <Setter Property="Template">
@@ -1992,7 +2009,7 @@
         </Style.Triggers>
     </Style>
 
-    <!-- ToolbarItems unificato con TaskList: stesso WrapPanel, nessun margine separatore -->
+    <!-- ToolbarItems unified with TaskList: same WrapPanel, no separator margin -->
     <Style TargetType="ItemsControl"
            x:Key="ToolbarItems"
            BasedOn="{StaticResource ToolbarItems}">
@@ -2007,16 +2024,16 @@
         </Style.Triggers>
     </Style>
 
-    <!-- ===== SUPERBAR PINNED ITEMS - STESSA AREA DELLE FINESTRE APERTE =====
-         Windows 7 Superbar: le icone bloccate risiedono nella stessa identica area
-         delle finestre aperte. Quando chiusa: solo icona trasparente + glass hover.
-         Quando avviata: si trasforma direttamente in pulsante finestra attiva
-         (cornice glass aperta + bagliore inferiore), senza duplicato.
-         
-         Questo stile ToolbarButton usa ESATTAMENTE gli stessi brush e template
-         dei TaskButton, ma con stato normale trasparente (pinned chiuso).
-         Hover = glass luminoso, Pressed = dark glass attivo + glow.
-         Dimensioni identiche a TaskButton (58px) per unificazione perfetta.
+    <!-- ===== SUPERBAR PINNED ITEMS - SAME AREA AS OPEN WINDOWS =====
+         Windows 7 Superbar: pinned icons live in the exact same area as
+         open windows. When closed: just a transparent icon + glass hover.
+         When launched: it turns directly into the active-window button
+         (open glass frame + bottom glow), with no duplicate.
+
+         This ToolbarButton style uses EXACTLY the same brushes and template
+         as TaskButton, but with a transparent normal state (pinned, closed).
+         Hover = bright glass, Pressed = active dark glass + glow.
+         Same dimensions as TaskButton (58px) for perfect unification.
     -->
     <Style TargetType="Image" x:Key="ToolbarIcon" BasedOn="{StaticResource TaskIcon}">
         <Setter Property="Width" Value="32" />
@@ -2026,7 +2043,7 @@
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
-        <!-- TOOLBARBUTTON (PINNATE CHIUSE): hover = stessi rettangoli tray | icona | con dimensioni accurate -->
+        <!-- TOOLBARBUTTON (PINNED CLOSED): hover = same tray rectangles | icon | with accurate dimensions -->
     <Style TargetType="Button" x:Key="ToolbarButton">
         <Setter Property="Foreground" Value="{DynamicResource ButtonForeground}" />
         <Setter Property="Margin" Value="{DynamicResource TaskButtonMargin}" />
@@ -2036,7 +2053,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid SnapsToDevicePixels="True">
-                        <!-- PINNATE NON APERTE: allargate 7% (52->56) | icona | - tray ripristinato -->
+                        <!-- PINNED NOT OPEN: widened 7% (52->56) | icon | - tray restored -->
                         <Canvas x:Name="HoverCanvas"
                                 Width="0"
                                 Height="0"
@@ -2053,7 +2070,7 @@
                                    Source="{DynamicResource TrayTileHoverImage}"
                                    Opacity="0" />
                         </Canvas>
-                        <!-- Icona 32px centrata -->
+                        <!-- Centered 32px icon -->
                         <ContentPresenter x:Name="Content"
                                           Margin="6,0"
                                           VerticalAlignment="Center"
@@ -2098,7 +2115,7 @@
         </Setter>
     </Style>
 
-    <!-- ToolbarButtonActive mantiene glass attivo per quando pinnata è in esecuzione (opzionale) -->
+    <!-- ToolbarButtonActive keeps the active glass for when a pinned item is running (optional) -->
     <Style TargetType="Button" x:Key="ToolbarButtonActive" BasedOn="{StaticResource TaskButtonActive}">
         <Setter Property="Margin" Value="{DynamicResource TaskButtonMargin}" />
         <Setter Property="Width" Value="{DynamicResource TaskButtonWidth}" />
@@ -2107,9 +2124,9 @@
 
     
 
-    <!-- ===== SUPERBAR: ELIMINAZIONE QUICK LAUNCH SEPARATA =====
-         Windows 7: niente grip/separatore tra pinnate e finestre aperte.
-         Il Thumb (grip puntinato) viene collassato -> un'unica area TaskList+Toolbar -->
+    <!-- ===== SUPERBAR: REMOVING THE SEPARATE QUICK LAUNCH =====
+         Windows 7: no grip/separator between pinned items and open windows.
+         The Thumb (dotted grip) is collapsed -> a single TaskList+Toolbar area -->
     <Style TargetType="Thumb"
            x:Key="ToolbarThumb"
            BasedOn="{StaticResource ToolbarThumb}">
@@ -2126,7 +2143,7 @@
         </Setter>
     </Style>
 
-    <!-- SHOW DESKTOP - AERO PEEK ORIGINALE WIN7 (PNG diretto 15x40) -->
+    <!-- SHOW DESKTOP - ORIGINAL WIN7 AERO PEEK (direct 15x40 PNG) -->
     <Style TargetType="ToggleButton"
            x:Key="ShowDesktopButton">
         <Setter Property="Background" Value="Transparent" />
@@ -2137,7 +2154,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Grid x:Name="RootGrid" Background="Transparent">
-                        <!-- Immagine Aero Peek originale Win7 15x40 -->
+                        <!-- Original Win7 Aero Peek image, 15x40 -->
                         <Image x:Name="AeroPeekImg"
                                Source="{DynamicResource Win7_ShowDesktopImage}"
                                Width="15"
@@ -2145,7 +2162,7 @@
                                Stretch="Fill"
                                SnapsToDevicePixels="True"
                                Opacity="0.95" />
-                        <!-- Overlay hover/pressed leggero -->
+                        <!-- Light hover/pressed overlay -->
                         <Border x:Name="HoverOverlay"
                                 Background="#00FFFFFF"
                                 Opacity="0" />
@@ -2193,7 +2210,7 @@
                 Value="1,0" />
     </Style>
 
-    <!-- TaskListScrollViewer unificato: margine 0 per fondersi con Toolbar -->
+    <!-- TaskListScrollViewer unified: 0 margin to blend with the Toolbar -->
     <Style x:Key="TaskListScrollViewer"
            TargetType="ScrollViewer"
            BasedOn="{StaticResource TaskListScrollViewer}">
@@ -2440,14 +2457,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
-                    <!-- Win7 overflow chevron: NIENTE risorse Vista e nessun
-                         riquadro disegnato, come in Windows 7: solo la freccia
-                         su/giu' (PNG in ../Resources); in hover/pressed il
-                         tile ha gia' il bordo vetro disegnato nell'immagine -->
+                    <!-- Win7 overflow chevron: NO Vista resources and no drawn
+                         box, as in Windows 7: just the up/down arrow (PNG in
+                         ../Resources); in hover/pressed the tile already has
+                         the glass border drawn into the image -->
                     <Border Background="Transparent"
                             Padding="2">
-                        <!-- immagini Win7 reali, SENZA riquadro: freccia a
-                             riposo, glass tile in hover/pressed -->
+                        <!-- real Win7 images, NO box: arrow at
+                             rest, glass tile on hover/pressed -->
                         <Image x:Name="ChevronImg"
                                Width="21"
                                Height="20"
@@ -2469,8 +2486,8 @@
                                     Property="Source"
                                     Value="{DynamicResource OverflowTilePressedImage}" />
                         </Trigger>
-                        <!-- aperto: nessuna rotazione, si usa solo lo stato standard;
-                             riusa la stessa immagine di hover anche per l'apertura -->
+                        <!-- open: no rotation, only the standard state is used;
+                             reuses the same hover image for the open state too -->
                         <Trigger Property="IsChecked"
                                  Value="True">
                             <Setter TargetName="ChevronImg"
@@ -2595,7 +2612,7 @@
         </Setter>
     </Style>
 
-    <!-- FIX BALLOON NOTIFICHE: chiaro anche con tema chiaro (prima era scuro #1B243D) -->
+    <!-- NOTIFICATION BALLOON FIX: light even with a light theme (previously dark #1B243D) -->
     <Style TargetType="ContentControl"
            x:Key="NotifyBalloon"
            BasedOn="{StaticResource GlobalFonts}">
@@ -2683,47 +2700,47 @@
     </Style>
 
     <!-- =========================================================================
-      WINDOWS 7 AERO - PACCHETTO COMPLETO
-      (organizzazione copiata dalla skin "Windows7" della mod Windhawk
+      WINDOWS 7 AERO - COMPLETE PACKAGE
+      (organization copied from the "Windows7" skin of the Windhawk mod
        "Windows 11 Taskbar Styler" - ramensoftware/windows-11-taskbar-styling-guide)
 
-      Parte estetica e interattiva: TUTTO nel XAML dichiarativo.
-      VINCOLO RISPETTATO: nessuna build modificata di RetroBar.
+      Visual and interactive part: ALL in declarative XAML.
+      CONSTRAINT HONORED: no modified RetroBar build.
 
-      SPOSTAMENTO ICONE (reale, zero codice): overlay pin/unpin che appare
-      all'hover delle icone (tray e popup). Scrive NotifyIcon.IsPinned via
-      binding TwoWay -> invoca Pin()/Unpin() dell'API pubblica ManagedShell
-      gia' presente in RetroBar. L'icona cambia zona immediatamente.
+      ICON MOVEMENT (real, zero code): pin/unpin overlay that appears
+      on icon hover (tray and popup). Writes NotifyIcon.IsPinned via
+      TwoWay binding -> calls the public ManagedShell Pin()/Unpin() API
+      already present in RetroBar. The icon moves to the other zone immediately.
 
-      Gli snippet C# qui sotto restano EMBEDDATI solo come riferimento
-      archiviale (NON richiesti per l'uso corrente): sarebbero il codice
-      minimo per drag&drop/click-shell/blur nativi.
+      The C# snippets below remain EMBEDDED only as archival reference
+      (NOT required for current use): they would be the minimal code
+      for native drag&drop/click-shell/blur.
 
-      Conversioni applicate dalla skin Windhawk "Windows7" (yaml -> xaml):
-      margini bottoni 1,1,1,1; testo orologio centrato + MinWidth 68;
-      bottone mostra-desktop 15px; icone task 32px (gia' conformi).
+      Conversions applied from the Windhawk "Windows7" skin (yaml -> xaml):
+      1,1,1,1 button margins; centered clock text + MinWidth 68;
+      15px show-desktop button; 32px task icons (already compliant).
 
-      TARGET CONTRACT  ==  nome elemento -> aggancio comportamentale
-        OverflowToggle   : ToggleButton; apri/chiudi OverflowPopup (purissimo XAML)
+      TARGET CONTRACT  ==  element name -> behavioral hook
+        OverflowToggle   : ToggleButton; opens/closes OverflowPopup (pure XAML)
         OverflowPopup    : Popup; IsOpen <-> OverflowToggle.IsChecked (TwoWay)
-        OverflowIcons    : ItemsControl griglia 3xN; pin overlay (sposta icone)
-        CustomizeLink    : TextBlock footer (visuale; hook C# = riferimento sotto)
+        OverflowIcons    : ItemsControl 3xN grid; pin overlay (moves icons)
+        CustomizeLink    : TextBlock footer (visual; C# hook = reference below)
       =========================================================================
 
       PATCH 1+3 - RetroBar/Controls/NotifyIconList.xaml.cs
 
-        // nel costruttore, dopo InitializeComponent();
+        // in the constructor, after InitializeComponent();
         dropHandler = new NotifyIconDropHandler(this);
 
-        // nuovo membro pubblico (classe NotifyIconList):
+        // new public member (NotifyIconList class):
         public NotifyIconDropHandler DropHandler => dropHandler;
 
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
 
-            // lookup guardati: i nomi vengono dal template di QUESTO tema;
-            // per tutti gli altri temi il comportamento resta invariato
+            // guarded lookups: the names come from THIS theme's template;
+            // behavior stays unchanged for all other themes
 
             if (GetTemplateChild("OverflowIcons") is ItemsControl overflowItems)
             {
@@ -2761,7 +2778,7 @@
             e.Handled = true;
         }
 
-        // PATCH 3 - vetro DWM nativo sull'overflow (blur + angoli arrotondati OS)
+        // PATCH 3 - native DWM glass on the overflow (blur + OS rounded corners)
         private void OverflowPopup_Opened(object sender, EventArgs e)
         {
             var popup = (System.Windows.Controls.Primitives.Popup)sender;
@@ -2772,7 +2789,7 @@
             var blurBehind = new DwmBlurBehind { DwFlags = 1 /* DWM_BB_ENABLE */, Enable = true };
             DwmEnableBlurBehindWindow(hWnd, ref blurBehind);
 
-            int roundCorners = 2; // DWMWCP_ROUND, ignorato dove non supportato
+            int roundCorners = 2; // DWMWCP_ROUND, ignored where unsupported
             DwmSetWindowAttribute(hWnd, 33 /* DWMWA_WINDOW_CORNER_PREFERENCE */, ref roundCorners, 4);
         }
 
@@ -2796,7 +2813,7 @@
         + all'inizio del file:
         using Tray = ManagedShell.WindowsTray;
 
-        // dentro void IDropTarget.Drop(IDropInfo dropInfo):
+        // inside void IDropTarget.Drop(IDropInfo dropInfo):
         DropInFlight = dropInfo;
 
         bool fromOverflow = GetContext(dropInfo.DragInfo?.VisualSource) == "NotifyIconOverflow";
@@ -2804,7 +2821,7 @@
 
         if (dropInfo.Data is Tray.NotifyIcon icon && fromOverflow != intoOverflow)
         {
-            // drop incrociato tray <-> overflow = pin/unpin (IsPinned)
+            // cross drop tray <-> overflow = pin/unpin (IsPinned)
             icon.IsPinned = !intoOverflow;
         }
         else if (!intoOverflow)
@@ -2816,7 +2833,7 @@
         DropInFlight = null;
         }
 
-        // helper (nuovo metodo privato nella classe):
+        // helper (new private method in the class):
         private static string GetContext(System.Windows.DependencyObject d)
         {
             while (d != null)
@@ -2828,12 +2845,12 @@
             return null;
         }
 
-      FINE PACCHETTO
+      END OF PACKAGE
     ========================================================================= -->
 
 
 
-    <!-- SENZA SOVRAPPOSIZIONE: Toolbar e TaskList area continua ma separata (come prima) -->
+    <!-- NO OVERLAP: Toolbar and TaskList form a continuous but separate area (as before) -->
     <Style x:Key="TaskListWrapPanel" TargetType="WrapPanel">
         <Setter Property="Margin" Value="0,0,0,0" />
         <Setter Property="Background" Value="Transparent" />
