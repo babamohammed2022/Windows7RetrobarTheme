@@ -12,4 +12,4 @@ This is a visual skin for RetroBar that replicates the Windows 7 taskbar interfa
 
 ## Technical Limitations
 * **Superbar Implementation:** It is conceptually recreated in design, but not fully functional as it requires custom modifications within the core RetroBar code.
-* **Transparency:** The trasparency rendering is subject to current XAML engine constraints.
+* **Transparency:** The Aero-like trasparency is a best-effort recreation.
