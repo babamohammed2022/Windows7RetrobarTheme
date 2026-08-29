@@ -1,6 +1,6 @@
 # Windows 7 RetroBar Theme
 
-This is a visual skin for RetroBar that replicates the Windows 7 taskbar interface, featuring a recreated system tray overflow menu, native-style icon hover effects, and animated Start button fading.
+This is a visual skin for RetroBar that replicates the Windows 7 taskbar interface, featuring a recreated system tray overflow menu, native-style icon hover effects, and animated Start button fading. This theme has been tested on Windows 10 21H2 and Windows 10 22H2.
 
 ## Screenshot
 <img width="1366" height="55" alt="win7taskabar" src="https://github.com/user-attachments/assets/da093f10-47a3-4ecb-b05e-b48bcc08594d" />
