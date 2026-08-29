@@ -1388,6 +1388,12 @@
                 Value="Center" />
         <Setter Property="VerticalAlignment"
                 Value="Center" />
+        <Setter Property="RenderOptions.BitmapScalingMode"
+                Value="HighQuality" />
+        <Setter Property="UseLayoutRounding"
+                Value="True" />
+        <Setter Property="SnapsToDevicePixels"
+                Value="True" />
         <Style.Triggers>
             <!-- With the label collapsed (combined mode) the icon fills the
                  button alone; a 4px left margin keeps it centered in the
@@ -1415,6 +1421,12 @@
                 Value="Right" />
         <Setter Property="VerticalAlignment"
                 Value="Bottom" />
+        <Setter Property="RenderOptions.BitmapScalingMode"
+                Value="HighQuality" />
+        <Setter Property="UseLayoutRounding"
+                Value="True" />
+        <Setter Property="SnapsToDevicePixels"
+                Value="True" />
     </Style>
 
     <Style TargetType="TextBlock"
