@@ -14,7 +14,7 @@ This is a custom visual skin for RetroBar that replicates the Windows 7 taskbar 
 
 ## Installation Guide
 
-To install this theme, [RetroBar](https://github.com/dremin/RetroBar) must be installed on the system. Navigate to `%LOCALAPPDATA%\RetroBar` and extract the contents of the archive file (or manually copy the `Resources` and `Themes` folders into the directory mentioned above). Once completed, open RetroBar settings and select the Windows 7 theme.
+To install this theme, [RetroBar](https://github.com/dremin/RetroBar) must be present on the system. Navigate to `%LOCALAPPDATA%\RetroBar` and extract the contents of the archive file (or manually copy the `Resources` and `Themes` folders into the directory mentioned above). Once completed, open RetroBar settings and select the Windows 7 theme.
 
 ## Technical Limitations
 
