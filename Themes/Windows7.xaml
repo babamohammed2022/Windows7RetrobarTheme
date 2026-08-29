@@ -2469,16 +2469,13 @@
                                     Property="Source"
                                     Value="{DynamicResource OverflowTilePressedImage}" />
                         </Trigger>
-                        <!-- aperto: la STESSA immagine ruotata di 180gradi = freccia giu'
-                             (vale anche sopra gli stati hover/pressed) -->
+                        <!-- aperto: nessuna rotazione, si usa solo lo stato standard;
+                             riusa la stessa immagine di hover anche per l'apertura -->
                         <Trigger Property="IsChecked"
                                  Value="True">
                             <Setter TargetName="ChevronImg"
-                                    Property="RenderTransform">
-                                <Setter.Value>
-                                    <ScaleTransform ScaleY="-1" />
-                                </Setter.Value>
-                            </Setter>
+                                    Property="Source"
+                                    Value="{DynamicResource OverflowTileHoverImage}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
