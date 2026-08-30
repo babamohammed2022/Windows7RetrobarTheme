@@ -294,8 +294,8 @@
     </RadialGradientBrush>
 
     <!-- Active: dark glass "open window" button with lit base -->
-    <SolidColorBrush x:Key="TaskButtonOuterBorderActive" Color="#C04A7FDA" />
-    <SolidColorBrush x:Key="TaskButtonInnerBorderActive" Color="#8A2A5AE0" />
+    <SolidColorBrush x:Key="TaskButtonOuterBorderActive" Color="#FF4A7FDA" />
+    <SolidColorBrush x:Key="TaskButtonInnerBorderActive" Color="#E02A5AE0" />
     <LinearGradientBrush x:Key="TaskButtonInnerTopRightBorderActive"
                          StartPoint="0,0"
                          EndPoint="0,1">
@@ -317,25 +317,25 @@
     <LinearGradientBrush x:Key="TaskButtonBackgroundActive"
                          StartPoint="0,0"
                          EndPoint="0,1">
-        <GradientStop Color="#46121C2A"
+        <GradientStop Color="#66121C2A"
                       Offset="0.0" />
-        <GradientStop Color="#C20D1826"
+        <GradientStop Color="#E80D1826"
                       Offset="0.45" />
-        <GradientStop Color="#D20C1522"
+        <GradientStop Color="#F00C1522"
                       Offset="0.52" />
-        <GradientStop Color="#C6234A6E"
+        <GradientStop Color="#E8234A6E"
                       Offset="1.0" />
     </LinearGradientBrush>
     <RadialGradientBrush x:Key="TaskButtonBottomBackgroundActive"
                          GradientOrigin="0.5,1.0"
                          Center="0.5,1.0"
                          RadiusX="0.75"
-                         RadiusY="0.32">
-        <GradientStop Color="#D8FAFEFF"
+                         RadiusY="0.35">
+        <GradientStop Color="#E8FAFEFF"
                       Offset="0.0" />
-        <GradientStop Color="#90D9F2FF"
+        <GradientStop Color="#A0D9F2FF"
                       Offset="0.3" />
-        <GradientStop Color="#40BFE9FF"
+        <GradientStop Color="#50BFE9FF"
                       Offset="0.65" />
         <GradientStop Color="#00BFE3FF"
                       Offset="1.0" />
